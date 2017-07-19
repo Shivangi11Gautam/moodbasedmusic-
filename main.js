@@ -322,7 +322,14 @@ function playlistcondition(){
        song.find('.song-album').text(obj.album);
        song.find('.song-length').text(obj.duration);
        addSongNameClickEvent(obj,i+1)
+
      }
+
+     		songs_table = $('#songs').DataTable(
+            {
+                paging: false
+            }
+          );
 
 
 
@@ -556,11 +563,7 @@ $('.main').addClass('hidden');
 		updateTimer();
 		},1000);
 		
-		   $('#songs').DataTable(
-       {
-           paging: false
-       }
-     );
+		  
 
 }
 
